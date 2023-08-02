@@ -1,5 +1,9 @@
-{% load static %}
+{% extends 'partials/base.html' %}
 
+{% load static %}
+{% block title %} FAQ {% endblock %}
+
+{% block content %}
   <main id="main" class="main">
     <div class="pagetitle">
       <h1>Frequently Asked Questions</h1>
@@ -278,3 +282,4 @@
     </section>
 
   </main><!-- End #main -->
+{% endblock %}

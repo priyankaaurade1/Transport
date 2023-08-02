@@ -1,0 +1,65 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block title %} Driver Details {% endblock %}
+
+{% block content %}
+<main id="main" class="main">
+  <section class="section driver_details">
+      <!-- Your form and card structure -->
+      <div class="card">
+          <div class="card-body">
+              <h5 class="card-title">Driver Details</h5>
+              <form class="row g-3 needs-validation" novalidate>
+                  <div class="col-md-4">
+                      <label for="validationCustom01" class="form-label">Full name</label>
+                      <input type="text" class="form-control" id="validationCustom01" name="driver_name"
+                             value="{{ driver_name }}" required>
+                      <div class="valid-feedback">
+                          Looks good!
+                      </div>
+                  </div>
+                  <!-- <div class="col-md-4">
+                      <label for="validationCustomUsername" class="form-label">Email Id</label>
+                      <div class="input-group has-validation">
+                          <span class="input-group-text" id="inputGroupPrepend">@</span>
+                          <input type="text" class="form-control" id="validationCustomUsername"
+                                 name="driver_email" value="{{ form.initial.driver_email }}" aria-describedby="inputGroupPrepend" required>
+                          <div class="invalid-feedback">
+                              Please choose a username.
+                          </div>
+                      </div>
+                  </div> -->
+                  <div class="col-md-3">
+                      <label for="validationCustom05" class="form-label">License Number</label>
+                      <input type="text" class="form-control" id="validationCustom05" name="driver_license_number"
+                             value="{{ driver_license_number }}" required>
+                      <div class="invalid-feedback">
+                          Please provide a License Number
+                      </div>
+                  </div>
+                  <div class="col-md-3">
+                      <label for="validationCustom05" class="form-label">Contact Number</label>
+                      <input type="text" class="form-control" id="validationCustom05" name="driver_contact_number"
+                             value="{{ driver_contact_number }}" required>
+                      <div class="invalid-feedback">
+                          Please provide a Contact Number
+                      </div>
+                  </div>
+                  <div class="col-md-3">
+                      <label for="validationCustom05" class="form-label">Address</label>
+                      <input type="text" class="form-control" id="validationCustom05" name="driver_address"
+                             value="{{ driver_address }}" required>
+                      <div class="invalid-feedback">
+                          Please provide an Address
+                      </div>
+                  </div>
+                  <div class="col-12">
+                      <button class="btn btn-primary" type="submit">Submit form</button>
+                  </div>
+              </form><!-- End Custom Styled Validation -->
+          </div>
+      </div>
+  </section>
+</main><!-- End #main -->
+{% endblock %}
+

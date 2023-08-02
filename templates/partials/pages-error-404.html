@@ -1,6 +1,10 @@
 
-{% load static %}
+{% extends 'partials/base.html' %}
 
+{% load static %}
+{% block title %} error {% endblock %}
+
+{% block content %}
   <main>
     <div class="container">
 
@@ -17,3 +21,4 @@
 
     </div>
   </main><!-- End #main -->
+{% endblock %}
